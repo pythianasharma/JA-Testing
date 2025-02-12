@@ -1,5 +1,21 @@
-[ebsapp]
-ashoc1ebscrp01.jamesavery.com ansible_become_user=applCRP
+# [ebsapp]
+# ashoc1ebscrp01.jamesavery.com ansible_become_user=applCRP
 
-[ebsdb]
-10.44.1.20 ansible_ssh_user=oracle
+# [ebsdb]
+# 10.44.1.20 ansible_ssh_user=oracle
+---
+all:
+  hosts:
+    crpdb1:
+      ansible_host: 10.44.1.20
+      ansible_ssh_user: oracle
+    crpapp1:
+      ansible_host: ashoc1ebscrp01.jamesavery.com
+      ansible_ssh_user: asharma
+  children:
+    ebsdb:
+      hosts:
+        crpdb1:
+    ebsapp:
+      hosts:
+        crpapp1:
