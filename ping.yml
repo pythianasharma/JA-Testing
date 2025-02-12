@@ -12,3 +12,15 @@
       debug: 
         msg: "{{ ping_output.ping }}"
   become: true
+
+- name: Ping EBS DB servers
+  hosts: ebsdb
+  gather_facts: no
+  tasks:
+    - name: Ping db servers
+      ping:
+      register: ping_output
+    
+    - name: Show output
+      debug: 
+        msg: "{{ ping_output.ping }}"

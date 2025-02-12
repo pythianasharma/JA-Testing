@@ -1,2 +1,5 @@
 [ebsapp]
 ashoc1ebscrp01.jamesavery.com ansible_become_user=applCRP
+
+[ebsdb]
+10.44.1.20 ansible_ssh_user=oracle
