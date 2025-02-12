@@ -12,6 +12,7 @@ all:
     crpapp1:
       ansible_host: ashoc1ebscrp01.jamesavery.com
       ansible_ssh_user: asharma
+      ansible_become_user: applCRP
   children:
     ebsdb:
       hosts:
