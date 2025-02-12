@@ -1,7 +1,7 @@
 ---
 # Play to test ping on Applications servers
 - name: Ping EBS Applications servers
-  hosts: all
+  hosts: ebsapp
   gather_facts: no
   tasks:
     - name: Ping app servers

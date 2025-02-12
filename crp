@@ -1,2 +1,2 @@
-[app]
-ashoc1ebscrp01 ansible_become_user: applCRP
+[ebsapp]
+ashoc1ebscrp01.jamesavery.com ansible_become_user=applCRP
